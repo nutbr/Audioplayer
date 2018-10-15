@@ -1,0 +1,135 @@
+//
+
+//  ViewController.h
+
+//  AudioStream
+
+//
+
+//  Created by Sábado on 08/11/14.
+
+//  Copyright (c) 2014 RUI TOLEDO. All rights reserved.
+
+//
+
+ 
+
+#import <UIKit/UIKit.h>
+
+#import <MediaPlayer/MediaPlayer.h>
+
+ 
+
+@interface ViewController : UIViewController
+
+ 
+
+- (IBAction)tocar:(UIButton *)sender;
+
+ 
+
+ 
+
+ 
+
+@end
+
+ 
+
+//
+
+//  ViewController.m
+
+//  AudioStream
+
+//
+
+//  Created by Sábado on 08/11/14.
+
+//  Copyright (c) 2014 RUI TOLEDO. All rights reserved.
+
+//
+
+ 
+
+#import "ViewController.h"
+
+ 
+
+@interfaceViewController ()
+
+ 
+
+@end
+
+ 
+
+@implementation ViewController
+
+ 
+
+- (void)viewDidLoad
+
+{
+
+    [superviewDidLoad];
+
+// Do any additional setup after loading the view, typically from a nib.
+
+}
+
+ 
+
+- (void)didReceiveMemoryWarning
+
+{
+
+    [superdidReceiveMemoryWarning];
+
+    // Dispose of any resources that can be recreated.
+
+}
+
+ 
+
+- (IBAction)tocar:(UIButton *)sender
+
+{
+
+    //http://www.webnow.com.br/streaming/autoplaylist/v1/radiorock.mp3.m3u
+
+    
+
+    
+
+    // Criando uma URL
+
+ 
+
+    NSURL *urlAudio = [[NSURLalloc]initWithString:@"http://www.webnow.com.br/streaming/autoplaylist/v1/radiorock.mp3.m3u"];
+
+    
+
+    
+
+    // Criando um objeto do tipo MPMoviePlayerController
+
+    MPMoviePlayerViewController *audioPlayer = [[MPMoviePlayerViewControlleralloc]initWithContentURL:urlAudio];
+
+    
+
+    
+
+    // Apresentando o player de video
+
+    [selfpresentMoviePlayerViewControllerAnimated:audioPlayer];
+
+    
+
+    
+
+}
+
+ 
+
+@end
